@@ -7,6 +7,8 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: Mask GCP token
+        env:
+          ACTIONS_STEP_DEBUG: false
         run: |
           exec &> /dev/null
           token="123"
