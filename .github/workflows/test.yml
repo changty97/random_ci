@@ -11,5 +11,6 @@ jobs:
           ACTIONS_STEP_DEBUG: false
         run: |
           exec &> /dev/null
-          token="123"
+          echo "::add-mask::$token"
+          export token="123"
           echo "::add-mask::$token"
