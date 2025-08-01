@@ -11,5 +11,6 @@ jobs:
     steps:
       - name: Mask GCP token
         run: |
+          set +x
           echo "::add-mask::${{ env.token }}"
           echo "Token is: ${{ env.token }}"
