@@ -2,9 +2,6 @@ name: Testing Mask
 on:
   push:
 
-env:
-  token: "123"
-
 jobs:
   test:
     runs-on: [ubuntu-latest]
@@ -12,5 +9,6 @@ jobs:
       - name: Mask GCP token
         run: |
           exec &> /dev/null
+          token="123"
           echo "::add-mask::${{ env.token }}"
           echo "Token is: ${{ env.token }}"
