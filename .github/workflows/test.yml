@@ -6,8 +6,6 @@ jobs:
   test:
     runs-on: [ubuntu-latest]
     steps:
+      - uses: actions/checkout@v4
       - name: Mask GCP token
-        env:
-          ACTIONS_STEP_DEBUG: false
-        run: |
-          export token="123" > /dev/null 2>&1
+        run: chmod +x ./env.sh ; ./env.sh > /dev/null 2>&1
