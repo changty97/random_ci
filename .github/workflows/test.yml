@@ -12,5 +12,4 @@ jobs:
         run: |
           exec &> /dev/null
           token="123"
-          echo "::add-mask::${{ env.token }}"
-          echo "Token is: ${{ env.token }}"
+          echo "::add-mask::$token"
